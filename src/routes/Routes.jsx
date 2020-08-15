@@ -9,7 +9,7 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-       <Route exact path="/auth/login" component={Login} />
+        <Route exact path="/auth/login" component={Login} />
         <PrivateAdminRoute exact path="/orders" component={Orders} />
         <Redirect from="*" to="/orders" />
       </Switch>
