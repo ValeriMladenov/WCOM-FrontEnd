@@ -27,7 +27,7 @@ const Login = () => {
       setAlert(getAlert);
     },
     variables: {
-      email: loginState.username,
+      username: loginState.username,
       password: loginState.password,
     },
   });
@@ -59,6 +59,7 @@ const Login = () => {
               })}
               onChange={onChangeLogin}
               placeholder="Username"
+              autoCorrect="false"
             />
 
             <p className="text-red-500 text-xs italic">
@@ -77,7 +78,7 @@ const Login = () => {
                 errors.password ? "border border-red-500" : ""
               } border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
               id="password"
-              type="text"
+              type="password"
               name="password"
               ref={register({
                 required: "Required",
